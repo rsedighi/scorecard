@@ -1,0 +1,31 @@
+<h1>Listing scorecards</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Opponent</th>
+      <th>W</th>
+      <th>L</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scorecards.each do |scorecard| %>
+      <tr>
+        <td><%= scorecard.opponent %></td>
+        <td><%= scorecard.w %></td>
+        <td><%= scorecard.l %></td>
+        <td><%= link_to 'Show', scorecard %></td>
+        <td><%= link_to 'Edit', edit_scorecard_path(scorecard) %></td>
+        <td><%= link_to 'Destroy', scorecard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scorecard', new_scorecard_path %>

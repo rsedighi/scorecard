@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Opponent:</strong>
+  <%= @scorecard.opponent %>
+</p>
+
+<p>
+  <strong>W:</strong>
+  <%= @scorecard.w %>
+</p>
+
+<p>
+  <strong>L:</strong>
+  <%= @scorecard.l %>
+</p>
+
+<%= link_to 'Edit', edit_scorecard_path(@scorecard) %> |
+<%= link_to 'Back', scorecards_path %>
